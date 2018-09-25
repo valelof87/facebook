@@ -8,16 +8,17 @@ public class Publicacion {
 	protected List <Evento> eventos;
 	protected String comentario;
 	
-	
+	//solo publicacion
 	public Publicacion(String publicacion) {
 		this.publicacion = publicacion;
 	}
-	
+	//publicacion con etiquetas
 	public Publicacion(String publicacion, List <Usuario>etiquetas) {
 		this.publicacion = publicacion;
 		this.etiquetas = etiquetas;
 	}
 	
+	//publicacion con etiquetas y evento
 	public Publicacion(String publicacion, List <Usuario>etiquetas, Evento evento) {
 		this.publicacion = publicacion;
 		this.etiquetas = etiquetas;
