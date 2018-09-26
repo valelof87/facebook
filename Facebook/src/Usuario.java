@@ -1,15 +1,22 @@
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 public class Usuario {
 	protected String nombreUsuario;
 	protected String apellido;
-	protected Date fNac;
+	protected Calendar fNac;
 	protected List <Usuario> amigos;
 	protected List <Evento> eventos;
 	protected List <Publicacion> publicacion;
 	
-	public Usuario (String nombreUsuario, String apellido, Date fnac, List <Usuario> amigos, List <Evento> eventos) {
+	public Usuario (String nombreUsuario, String apellido,  Calendar fNac) {
+		this.nombreUsuario = nombreUsuario;
+		this.apellido = apellido;
+		this.fNac = fNac;
+	}
+	
+	
+	public Usuario (String nombreUsuario, String apellido, List <Usuario> amigos, List <Evento> eventos, Calendar fNac) {
 		this.nombreUsuario = nombreUsuario;
 		this.apellido = apellido;
 		this.fNac = fNac;
@@ -29,6 +36,10 @@ public class Usuario {
 	
 	public void addPublicacion(Publicacion nuevaPublicacion) {
 		publicacion.add(nuevaPublicacion);
+	}
+	
+	public String toString() {
+		return nombreUsuario + " " + apellido + " " + fNac;
 	}
 	
 }
